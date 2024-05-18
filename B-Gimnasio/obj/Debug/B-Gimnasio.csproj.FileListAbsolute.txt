@@ -1,0 +1,16 @@
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\B-Gimnasio.csproj.AssemblyReference.cache
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\B_Gimnasio.Properties.Resources.resources
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\B-Gimnasio.csproj.GenerateResource.cache
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\B-Gimnasio.csproj.CoreCompileInputs.cache
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\bin\Debug\B-Gimnasio.exe.config
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\bin\Debug\B-Gimnasio.exe
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\bin\Debug\B-Gimnasio.pdb
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\bin\Debug\ClasesGimnasio.dll
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\bin\Debug\ClasesGimnasio.pdb
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\B-Gimnasio.csproj.Up2Date
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\B-Gimnasio.exe
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\B-Gimnasio.pdb
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.Login.resources
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.AltaProfesores.resources
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.MenuPrincipal.resources
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.MenuProfesores.resources

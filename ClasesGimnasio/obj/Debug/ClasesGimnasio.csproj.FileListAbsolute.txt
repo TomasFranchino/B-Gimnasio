@@ -1,0 +1,6 @@
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasio\bin\Debug\ClasesGimnasio.dll
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasio\bin\Debug\ClasesGimnasio.pdb
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasio\obj\Debug\ClasesGimnasio.csproj.AssemblyReference.cache
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasio\obj\Debug\ClasesGimnasio.csproj.CoreCompileInputs.cache
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasio\obj\Debug\ClasesGimnasio.dll
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasio\obj\Debug\ClasesGimnasio.pdb

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="PostProfesor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="profe" type="tns:Calendario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Calendario">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="dniProfesor" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="titulo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="clases" type="tns:ArrayOfClases" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfClases">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Clases" nillable="true" type="tns:Clases" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Clases">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="tema" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="cantAlumnos" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="fechaInicio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="idProfesor" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PostProfesorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProfesores">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProfesoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProfesoresResult" type="tns:ArrayOfCalendario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCalendario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Calendario" nillable="true" type="tns:Calendario" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProfesor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfesorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProfesorResult" type="tns:Calendario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProfesor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteProfesorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PutProfesor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nuevoProfe" type="tns:Calendario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutProfesorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CalcularSueldoProfe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CalcularSueldoProfeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalcularSueldoProfeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClasesSinAlumnos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ClasesSinAlumnosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ClasesSinAlumnosResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClases">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetClasesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClasesResult" type="tns:ArrayOfClases" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetClaseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetClaseResult" type="tns:Clases" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="PostProfesorSoapIn">
+    <wsdl:part name="parameters" element="tns:PostProfesor" />
+  </wsdl:message>
+  <wsdl:message name="PostProfesorSoapOut">
+    <wsdl:part name="parameters" element="tns:PostProfesorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProfesoresSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProfesores" />
+  </wsdl:message>
+  <wsdl:message name="GetProfesoresSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProfesoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProfesorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProfesor" />
+  </wsdl:message>
+  <wsdl:message name="GetProfesorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProfesorResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProfesorSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteProfesor" />
+  </wsdl:message>
+  <wsdl:message name="DeleteProfesorSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteProfesorResponse" />
+  </wsdl:message>
+  <wsdl:message name="PutProfesorSoapIn">
+    <wsdl:part name="parameters" element="tns:PutProfesor" />
+  </wsdl:message>
+  <wsdl:message name="PutProfesorSoapOut">
+    <wsdl:part name="parameters" element="tns:PutProfesorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CalcularSueldoProfeSoapIn">
+    <wsdl:part name="parameters" element="tns:CalcularSueldoProfe" />
+  </wsdl:message>
+  <wsdl:message name="CalcularSueldoProfeSoapOut">
+    <wsdl:part name="parameters" element="tns:CalcularSueldoProfeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ClasesSinAlumnosSoapIn">
+    <wsdl:part name="parameters" element="tns:ClasesSinAlumnos" />
+  </wsdl:message>
+  <wsdl:message name="ClasesSinAlumnosSoapOut">
+    <wsdl:part name="parameters" element="tns:ClasesSinAlumnosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClasesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClases" />
+  </wsdl:message>
+  <wsdl:message name="GetClasesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetClaseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetClase" />
+  </wsdl:message>
+  <wsdl:message name="GetClaseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetClaseResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="PostProfesor">
+      <wsdl:input message="tns:PostProfesorSoapIn" />
+      <wsdl:output message="tns:PostProfesorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfesores">
+      <wsdl:input message="tns:GetProfesoresSoapIn" />
+      <wsdl:output message="tns:GetProfesoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfesor">
+      <wsdl:input message="tns:GetProfesorSoapIn" />
+      <wsdl:output message="tns:GetProfesorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfesor">
+      <wsdl:input message="tns:DeleteProfesorSoapIn" />
+      <wsdl:output message="tns:DeleteProfesorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PutProfesor">
+      <wsdl:input message="tns:PutProfesorSoapIn" />
+      <wsdl:output message="tns:PutProfesorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CalcularSueldoProfe">
+      <wsdl:input message="tns:CalcularSueldoProfeSoapIn" />
+      <wsdl:output message="tns:CalcularSueldoProfeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ClasesSinAlumnos">
+      <wsdl:input message="tns:ClasesSinAlumnosSoapIn" />
+      <wsdl:output message="tns:ClasesSinAlumnosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClases">
+      <wsdl:input message="tns:GetClasesSoapIn" />
+      <wsdl:output message="tns:GetClasesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClase">
+      <wsdl:input message="tns:GetClaseSoapIn" />
+      <wsdl:output message="tns:GetClaseSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PostProfesor">
+      <soap:operation soapAction="http://tempuri.org/PostProfesor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfesores">
+      <soap:operation soapAction="http://tempuri.org/GetProfesores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfesor">
+      <soap:operation soapAction="http://tempuri.org/GetProfesor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfesor">
+      <soap:operation soapAction="http://tempuri.org/DeleteProfesor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutProfesor">
+      <soap:operation soapAction="http://tempuri.org/PutProfesor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularSueldoProfe">
+      <soap:operation soapAction="http://tempuri.org/CalcularSueldoProfe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClasesSinAlumnos">
+      <soap:operation soapAction="http://tempuri.org/ClasesSinAlumnos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClases">
+      <soap:operation soapAction="http://tempuri.org/GetClases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClase">
+      <soap:operation soapAction="http://tempuri.org/GetClase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PostProfesor">
+      <soap12:operation soapAction="http://tempuri.org/PostProfesor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfesores">
+      <soap12:operation soapAction="http://tempuri.org/GetProfesores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfesor">
+      <soap12:operation soapAction="http://tempuri.org/GetProfesor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProfesor">
+      <soap12:operation soapAction="http://tempuri.org/DeleteProfesor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutProfesor">
+      <soap12:operation soapAction="http://tempuri.org/PutProfesor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalcularSueldoProfe">
+      <soap12:operation soapAction="http://tempuri.org/CalcularSueldoProfe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ClasesSinAlumnos">
+      <soap12:operation soapAction="http://tempuri.org/ClasesSinAlumnos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClases">
+      <soap12:operation soapAction="http://tempuri.org/GetClases" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClase">
+      <soap12:operation soapAction="http://tempuri.org/GetClase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://localhost:64554/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://localhost:64554/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
