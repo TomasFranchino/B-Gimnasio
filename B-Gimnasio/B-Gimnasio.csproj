@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AltaClases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AltaClases.Designer.cs">
+      <DependentUpon>AltaClases.cs</DependentUpon>
+    </Compile>
     <Compile Include="AltaProfesores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenuClases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuClases.Designer.cs">
+      <DependentUpon>MenuClases.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,11 +91,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AltaClases.resx">
+      <DependentUpon>AltaClases.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltaProfesores.resx">
       <DependentUpon>AltaProfesores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuClases.resx">
+      <DependentUpon>MenuClases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -118,7 +136,13 @@
     <None Include="Connected Services\ServiceReference1\B_Gimnasio.ServiceReference1.GetProfesorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference1\B_Gimnasio.ServiceReference1.PostClaseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference1\B_Gimnasio.ServiceReference1.PostProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\B_Gimnasio.ServiceReference1.PutClasesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference1\B_Gimnasio.ServiceReference1.PutProfesorResponse.datasource">

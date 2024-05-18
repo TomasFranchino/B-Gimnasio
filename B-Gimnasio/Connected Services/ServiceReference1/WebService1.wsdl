@@ -136,6 +136,36 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="DeleteClase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteClaseResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PutClases">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nuevaClase" type="tns:Clases" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutClasesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PostClase">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clase" type="tns:Clases" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostClaseResponse">
+        <s:complexType />
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="PostProfesorSoapIn">
@@ -192,6 +222,24 @@
   <wsdl:message name="GetClaseSoapOut">
     <wsdl:part name="parameters" element="tns:GetClaseResponse" />
   </wsdl:message>
+  <wsdl:message name="DeleteClaseSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteClase" />
+  </wsdl:message>
+  <wsdl:message name="DeleteClaseSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteClaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="PutClasesSoapIn">
+    <wsdl:part name="parameters" element="tns:PutClases" />
+  </wsdl:message>
+  <wsdl:message name="PutClasesSoapOut">
+    <wsdl:part name="parameters" element="tns:PutClasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostClaseSoapIn">
+    <wsdl:part name="parameters" element="tns:PostClase" />
+  </wsdl:message>
+  <wsdl:message name="PostClaseSoapOut">
+    <wsdl:part name="parameters" element="tns:PostClaseResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebService1Soap">
     <wsdl:operation name="PostProfesor">
       <wsdl:input message="tns:PostProfesorSoapIn" />
@@ -228,6 +276,18 @@
     <wsdl:operation name="GetClase">
       <wsdl:input message="tns:GetClaseSoapIn" />
       <wsdl:output message="tns:GetClaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClase">
+      <wsdl:input message="tns:DeleteClaseSoapIn" />
+      <wsdl:output message="tns:DeleteClaseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PutClases">
+      <wsdl:input message="tns:PutClasesSoapIn" />
+      <wsdl:output message="tns:PutClasesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostClase">
+      <wsdl:input message="tns:PostClaseSoapIn" />
+      <wsdl:output message="tns:PostClaseSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -313,6 +373,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="DeleteClase">
+      <soap:operation soapAction="http://tempuri.org/DeleteClase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutClases">
+      <soap:operation soapAction="http://tempuri.org/PutClases" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostClase">
+      <soap:operation soapAction="http://tempuri.org/PostClase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -390,6 +477,33 @@
     </wsdl:operation>
     <wsdl:operation name="GetClase">
       <soap12:operation soapAction="http://tempuri.org/GetClase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClase">
+      <soap12:operation soapAction="http://tempuri.org/DeleteClase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutClases">
+      <soap12:operation soapAction="http://tempuri.org/PutClases" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostClase">
+      <soap12:operation soapAction="http://tempuri.org/PostClase" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

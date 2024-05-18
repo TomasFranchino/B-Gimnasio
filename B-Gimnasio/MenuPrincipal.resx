@@ -413,11 +413,14 @@
   <data name="btnCerrarSesion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Century Gothic, 12pt</value>
   </data>
+  <data name="btnCerrarSesion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnCerrarSesion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 420</value>
+    <value>0, 417</value>
   </data>
   <data name="btnCerrarSesion.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 40</value>
+    <value>190, 43</value>
   </data>
   <data name="btnCerrarSesion.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>

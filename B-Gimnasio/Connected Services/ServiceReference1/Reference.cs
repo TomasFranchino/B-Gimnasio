@@ -289,6 +289,26 @@ namespace B_Gimnasio.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetClase", ReplyAction="*")]
         System.Threading.Tasks.Task<B_Gimnasio.ServiceReference1.GetClaseResponse> GetClaseAsync(B_Gimnasio.ServiceReference1.GetClaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteClase", ReplyAction="*")]
+        void DeleteClase(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteClase", ReplyAction="*")]
+        System.Threading.Tasks.Task DeleteClaseAsync(int id);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento nuevaClase del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PutClases", ReplyAction="*")]
+        B_Gimnasio.ServiceReference1.PutClasesResponse PutClases(B_Gimnasio.ServiceReference1.PutClasesRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PutClases", ReplyAction="*")]
+        System.Threading.Tasks.Task<B_Gimnasio.ServiceReference1.PutClasesResponse> PutClasesAsync(B_Gimnasio.ServiceReference1.PutClasesRequest request);
+        
+        // CODEGEN: Se está generando un contrato de mensaje, ya que el nombre de elemento clase del espacio de nombres http://tempuri.org/ no está marcado para aceptar valores nil.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PostClase", ReplyAction="*")]
+        B_Gimnasio.ServiceReference1.PostClaseResponse PostClase(B_Gimnasio.ServiceReference1.PostClaseRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/PostClase", ReplyAction="*")]
+        System.Threading.Tasks.Task<B_Gimnasio.ServiceReference1.PostClaseResponse> PostClaseAsync(B_Gimnasio.ServiceReference1.PostClaseRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -671,6 +691,128 @@ namespace B_Gimnasio.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class PutClasesRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="PutClases", Namespace="http://tempuri.org/", Order=0)]
+        public B_Gimnasio.ServiceReference1.PutClasesRequestBody Body;
+        
+        public PutClasesRequest() {
+        }
+        
+        public PutClasesRequest(B_Gimnasio.ServiceReference1.PutClasesRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class PutClasesRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public B_Gimnasio.ServiceReference1.Clases nuevaClase;
+        
+        public PutClasesRequestBody() {
+        }
+        
+        public PutClasesRequestBody(B_Gimnasio.ServiceReference1.Clases nuevaClase) {
+            this.nuevaClase = nuevaClase;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class PutClasesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="PutClasesResponse", Namespace="http://tempuri.org/", Order=0)]
+        public B_Gimnasio.ServiceReference1.PutClasesResponseBody Body;
+        
+        public PutClasesResponse() {
+        }
+        
+        public PutClasesResponse(B_Gimnasio.ServiceReference1.PutClasesResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class PutClasesResponseBody {
+        
+        public PutClasesResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class PostClaseRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="PostClase", Namespace="http://tempuri.org/", Order=0)]
+        public B_Gimnasio.ServiceReference1.PostClaseRequestBody Body;
+        
+        public PostClaseRequest() {
+        }
+        
+        public PostClaseRequest(B_Gimnasio.ServiceReference1.PostClaseRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class PostClaseRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public B_Gimnasio.ServiceReference1.Clases clase;
+        
+        public PostClaseRequestBody() {
+        }
+        
+        public PostClaseRequestBody(B_Gimnasio.ServiceReference1.Clases clase) {
+            this.clase = clase;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class PostClaseResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="PostClaseResponse", Namespace="http://tempuri.org/", Order=0)]
+        public B_Gimnasio.ServiceReference1.PostClaseResponseBody Body;
+        
+        public PostClaseResponse() {
+        }
+        
+        public PostClaseResponse(B_Gimnasio.ServiceReference1.PostClaseResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class PostClaseResponseBody {
+        
+        public PostClaseResponseBody() {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WebService1SoapChannel : B_Gimnasio.ServiceReference1.WebService1Soap, System.ServiceModel.IClientChannel {
     }
@@ -864,6 +1006,62 @@ namespace B_Gimnasio.ServiceReference1 {
             inValue.Body = new B_Gimnasio.ServiceReference1.GetClaseRequestBody();
             inValue.Body.id = id;
             return ((B_Gimnasio.ServiceReference1.WebService1Soap)(this)).GetClaseAsync(inValue);
+        }
+        
+        public void DeleteClase(int id) {
+            base.Channel.DeleteClase(id);
+        }
+        
+        public System.Threading.Tasks.Task DeleteClaseAsync(int id) {
+            return base.Channel.DeleteClaseAsync(id);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        B_Gimnasio.ServiceReference1.PutClasesResponse B_Gimnasio.ServiceReference1.WebService1Soap.PutClases(B_Gimnasio.ServiceReference1.PutClasesRequest request) {
+            return base.Channel.PutClases(request);
+        }
+        
+        public void PutClases(B_Gimnasio.ServiceReference1.Clases nuevaClase) {
+            B_Gimnasio.ServiceReference1.PutClasesRequest inValue = new B_Gimnasio.ServiceReference1.PutClasesRequest();
+            inValue.Body = new B_Gimnasio.ServiceReference1.PutClasesRequestBody();
+            inValue.Body.nuevaClase = nuevaClase;
+            B_Gimnasio.ServiceReference1.PutClasesResponse retVal = ((B_Gimnasio.ServiceReference1.WebService1Soap)(this)).PutClases(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<B_Gimnasio.ServiceReference1.PutClasesResponse> B_Gimnasio.ServiceReference1.WebService1Soap.PutClasesAsync(B_Gimnasio.ServiceReference1.PutClasesRequest request) {
+            return base.Channel.PutClasesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<B_Gimnasio.ServiceReference1.PutClasesResponse> PutClasesAsync(B_Gimnasio.ServiceReference1.Clases nuevaClase) {
+            B_Gimnasio.ServiceReference1.PutClasesRequest inValue = new B_Gimnasio.ServiceReference1.PutClasesRequest();
+            inValue.Body = new B_Gimnasio.ServiceReference1.PutClasesRequestBody();
+            inValue.Body.nuevaClase = nuevaClase;
+            return ((B_Gimnasio.ServiceReference1.WebService1Soap)(this)).PutClasesAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        B_Gimnasio.ServiceReference1.PostClaseResponse B_Gimnasio.ServiceReference1.WebService1Soap.PostClase(B_Gimnasio.ServiceReference1.PostClaseRequest request) {
+            return base.Channel.PostClase(request);
+        }
+        
+        public void PostClase(B_Gimnasio.ServiceReference1.Clases clase) {
+            B_Gimnasio.ServiceReference1.PostClaseRequest inValue = new B_Gimnasio.ServiceReference1.PostClaseRequest();
+            inValue.Body = new B_Gimnasio.ServiceReference1.PostClaseRequestBody();
+            inValue.Body.clase = clase;
+            B_Gimnasio.ServiceReference1.PostClaseResponse retVal = ((B_Gimnasio.ServiceReference1.WebService1Soap)(this)).PostClase(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<B_Gimnasio.ServiceReference1.PostClaseResponse> B_Gimnasio.ServiceReference1.WebService1Soap.PostClaseAsync(B_Gimnasio.ServiceReference1.PostClaseRequest request) {
+            return base.Channel.PostClaseAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<B_Gimnasio.ServiceReference1.PostClaseResponse> PostClaseAsync(B_Gimnasio.ServiceReference1.Clases clase) {
+            B_Gimnasio.ServiceReference1.PostClaseRequest inValue = new B_Gimnasio.ServiceReference1.PostClaseRequest();
+            inValue.Body = new B_Gimnasio.ServiceReference1.PostClaseRequestBody();
+            inValue.Body.clase = clase;
+            return ((B_Gimnasio.ServiceReference1.WebService1Soap)(this)).PostClaseAsync(inValue);
         }
     }
 }

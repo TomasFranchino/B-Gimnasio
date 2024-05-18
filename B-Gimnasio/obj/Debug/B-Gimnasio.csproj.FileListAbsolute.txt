@@ -14,3 +14,5 @@ C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.Logi
 C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.AltaProfesores.resources
 C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.MenuPrincipal.resources
 C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.MenuProfesores.resources
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.MenuClases.resources
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\B-Gimnasio\obj\Debug\Vista.AltaClases.resources

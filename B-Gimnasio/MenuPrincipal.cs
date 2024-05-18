@@ -33,11 +33,11 @@ namespace Vista
 
         private void btDarAltaSecretario_Click(object sender, EventArgs e)
         {
-            ////abrirFormChico(new Form4());
-            //MenuSecretarios logeo;
-            //logeo = new MenuSecretarios();
-            //logeo.Show();
-            //this.Hide();
+            abrirFormChico(new MenuClases());
+            MenuClases logeo;
+            logeo = new MenuClases();
+            logeo.Show();
+            this.Hide();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -85,20 +85,12 @@ namespace Vista
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //abrirFormChico(new Form5());
-            //MenuClientes logeo;
-            //logeo = new MenuClientes();
-            //logeo.Show();
-            //this.Hide();
+           
         }
 
         private void btnSuscripciones_Click(object sender, EventArgs e)
         {
-            //abrirFormChico(new Form7());
-            //MenuSuscripciones logeo;
-            //logeo = new MenuSuscripciones();
-            //logeo.Show();
-            //this.Hide();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

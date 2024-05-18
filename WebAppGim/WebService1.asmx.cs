@@ -75,5 +75,26 @@ namespace WebAppGim
         {
             return Repositorio.clases.Find(x => x.id == id);
         }
+
+        [WebMethod]
+        public void DeleteClase(int id)
+        {
+            Clases clase = Repositorio.clases.Find(x => x.id == id);
+            Repositorio.clases.Remove(clase);
+        }
+
+        [WebMethod]
+        public void PutClases(Clases nuevaClase)
+        {
+            Clases clase = Repositorio.clases.Find(x => x.id == nuevaClase.id);
+            Repositorio.clases.Remove(clase);
+            Repositorio.clases.Add(nuevaClase);
+        }
+
+        [WebMethod]
+        public void PostClase(Clases clase)
+        {
+            Repositorio.clases.Add(clase);
+        }
     }
 }

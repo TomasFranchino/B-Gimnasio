@@ -1,0 +1,11 @@
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\bin\Debug\ClasesGimnasioTests.dll
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\bin\Debug\ClasesGimnasioTests.pdb
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\bin\Debug\ClasesGimnasio.dll
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\bin\Debug\ClasesGimnasio.pdb
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\bin\Debug\es\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\obj\Debug\ClasesGimnasioTests.csproj.AssemblyReference.cache
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\obj\Debug\ClasesGimnasioTests.csproj.CoreCompileInputs.cache
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\obj\Debug\ClasesGi.A0193FE0.Up2Date
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\obj\Debug\ClasesGimnasioTests.dll
+C:\Users\Tomas Franchino\source\repos\B-Gimnasio\ClasesGimnasioTests\obj\Debug\ClasesGimnasioTests.pdb
